@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "AutoAuth for UCLA",
 	"short_name": "AutoAuth",
-	"version": "0.1",
+	"version": "0.2.1",
 	"description": "Speed up UCLA Single Sign-On.",
 	"developer": {
 	  "name": "Kevin Hsieh",
