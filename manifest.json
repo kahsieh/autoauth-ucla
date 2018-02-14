@@ -1,0 +1,29 @@
+{
+	"manifest_version": 2,
+	"name": "AutoAuth for UCLA",
+	"short_name": "AutoAuth",
+	"version": "0.1",
+	"description": "Speed up UCLA Single Sign-On.",
+	"developer": {
+	  "name": "Kevin Hsieh",
+	  "url": "http://www.kevinhsieh.net"
+	},
+	"icons": {
+		"48": "icons/ic_perm_identity_black_48dp_1x.png",
+		"96": "icons/ic_perm_identity_black_48dp_2x.png"
+	},
+	"permissions": [
+		"storage"
+	],
+	"content_scripts": [
+		{
+			"matches": ["https://shb.ais.ucla.edu/*"],
+			"js": ["auto-user.js"]
+		},
+		{
+			"matches": ["https://api-d594f029.duosecurity.com/*"],
+			"js": ["auto-mfa.js"],
+			"all_frames": true
+		}
+	]
+}
