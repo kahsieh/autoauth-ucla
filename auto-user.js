@@ -7,7 +7,7 @@ Kevin Hsieh
 */
 
 setTimeout(() => {
-    if (document.getElementById("logon").value != "") {
+	if (document.getElementById("logon").value != "") {
 		document.getElementsByClassName("primary-button")[0].click();
 	}
 }, 100);

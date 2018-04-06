@@ -24,7 +24,7 @@ setTimeout(() => {
 // resetPasscodes: Displays a prompt to enter and store new passcodes.
 // ignoreMissingNext: Inserts the first passcode if next can't be found.
 function autoFill(resetPasscodes = false, ignoreMissingNext = false) {
-	browser.storage.local.get().then(item => {
+	browser.storage.sync.get().then(item => {
 		let passcodes =
 			item.hasOwnProperty("passcodes") ? item["passcodes"] : null;
 			// An array of 10 strings, or null if not found.
@@ -61,7 +61,7 @@ function setPasscodes(currentPasscodes) {
 			"Invalid entry. Please try again.";
 		return;
 	}
-	browser.storage.local.set({
+	browser.storage.sync.set({
 		"passcodes": passcodes,
 		"lastUsed": -1
 	}).then(() => autoFill(false, true),
@@ -70,7 +70,7 @@ function setPasscodes(currentPasscodes) {
 
 // Stores the index of the last used passcode.
 function setLastUsed(value) {
-	browser.storage.local.set({
+	browser.storage.sync.set({
 		"lastUsed": value
 	}).then(null, error => console.log("AutoAuth: Storage error!"));
 }

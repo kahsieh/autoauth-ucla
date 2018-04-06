@@ -2,8 +2,13 @@
 	"manifest_version": 2,
 	"name": "AutoAuth for UCLA",
 	"short_name": "AutoAuth",
-	"version": "0.3",
+	"version": "0.4",
 	"description": "Speed up UCLA Single Sign-On.",
+	"applications": {
+		"gecko": {
+			"id": "{60871839-618e-474d-b9ef-07fc9258ed31}"
+		}
+	},
 	"developer": {
 	  "name": "Kevin Hsieh",
 	  "url": "http://www.kevinhsieh.net"
