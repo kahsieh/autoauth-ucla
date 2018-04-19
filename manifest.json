@@ -1,34 +1,34 @@
 {
-	"manifest_version": 2,
-	"name": "AutoAuth for UCLA",
-	"short_name": "AutoAuth",
-	"version": "0.4",
-	"description": "Speed up UCLA Single Sign-On.",
-	"applications": {
-		"gecko": {
-			"id": "{60871839-618e-474d-b9ef-07fc9258ed31}"
-		}
-	},
-	"developer": {
-	  "name": "Kevin Hsieh",
-	  "url": "http://www.kevinhsieh.net"
-	},
-	"icons": {
-		"48": "icons/ic_perm_identity_black_48dp_1x.png",
-		"96": "icons/ic_perm_identity_black_48dp_2x.png"
-	},
-	"permissions": [
-		"storage"
-	],
-	"content_scripts": [
-		{
-			"matches": ["https://shb.ais.ucla.edu/*"],
-			"js": ["auto-user.js"]
-		},
-		{
-			"matches": ["https://api-d594f029.duosecurity.com/*"],
-			"js": ["auto-mfa.js"],
-			"all_frames": true
-		}
-	]
+    "manifest_version": 2,
+    "name": "AutoAuth for UCLA",
+    "short_name": "AutoAuth",
+    "version": "0.5.1",
+    "description": "Speed up UCLA Single Sign-On.",
+    "developer": {
+      "name": "Kevin Hsieh",
+      "url": "http://www.kevinhsieh.net"
+    },
+    "applications": {
+        "gecko": {
+            "id": "{60871839-618e-474d-b9ef-07fc9258ed31}"
+        }
+    },
+    "icons": {
+        "48": "icons/ic_perm_identity_black_48dp_1x.png",
+        "96": "icons/ic_perm_identity_black_48dp_2x.png"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://shb.ais.ucla.edu/*"],
+            "js": ["auto-user.js"]
+        },
+        {
+            "matches": ["https://api-d594f029.duosecurity.com/*"],
+            "js": ["auto-mfa.js"],
+            "all_frames": true
+        }
+    ]
 }
