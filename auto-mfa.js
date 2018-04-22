@@ -53,7 +53,7 @@ setTimeout(() => {
  * @param {boolean} doneReset Directly insert the first stored passcode.
  */
 function autoFill(doneReset) {
-    browser.storage.sync.get().then(item => {
+    chrome.storage.sync.get(["passcodes", "lastUsed"], item => {
         let passcodes = item.hasOwnProperty("passcodes") ?
             item["passcodes"] : null;
             // Array of 10 strings (null if not found).
@@ -81,7 +81,7 @@ function autoFill(doneReset) {
             gebId("autoauth-message").innerHTML =
                 "Please enter new passcodes.";
         }
-    }, error => console.log("AutoAuth: Storage error"));
+    });
 }
 
 /**
@@ -95,11 +95,10 @@ function setPasscodes() {
             "Invalid entry. Please try again.";
     }
     else {
-        browser.storage.sync.set({
+        chrome.storage.sync.set({
             "passcodes": passcodes,
             "lastUsed": -1
-        }).then(() => autoFill(true),
-                e => console.log("AutoAuth: Storage error"));
+        }, () => autoFill(true));
     }
 }
 
@@ -109,8 +108,7 @@ function setPasscodes() {
  * @param {number} value 
  */
 function setLastUsed(value) {
-    browser.storage.sync.set({
+    chrome.storage.sync.set({
         "lastUsed": value
-    }).then(null,
-            e => console.log("AutoAuth: Storage error"));
+    }, null);
 }

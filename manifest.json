@@ -4,18 +4,10 @@
     "short_name": "AutoAuth",
     "version": "0.5.1",
     "description": "Speed up UCLA Single Sign-On.",
-    "developer": {
-      "name": "Kevin Hsieh",
-      "url": "http://www.kevinhsieh.net"
-    },
-    "applications": {
-        "gecko": {
-            "id": "{60871839-618e-474d-b9ef-07fc9258ed31}"
-        }
-    },
     "icons": {
         "48": "icons/ic_perm_identity_black_48dp_1x.png",
-        "96": "icons/ic_perm_identity_black_48dp_2x.png"
+        "96": "icons/ic_perm_identity_black_48dp_2x.png",
+        "128": "icons/ic_perm_identity_black_128dp.png"
     },
     "permissions": [
         "storage"
