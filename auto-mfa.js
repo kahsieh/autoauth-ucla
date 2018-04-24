@@ -89,7 +89,10 @@ function autoFill(doneReset) {
  */
 function setPasscodes() {
     let passcodes = window.prompt("Enter the ten passcodes from your most" +
-        " recent MFA SMS message (separated by spaces):", "").trim().split(" ");
+        " recent MFA SMS message (separated by spaces):", "")
+        .trim()
+        .split(" ")
+        .filter(passcode => passcode.match(/^\d+$/));
     if (passcodes.length != 10) {
         gebId("autoauth-message").innerHTML =
             "Invalid entry. Please try again.";
