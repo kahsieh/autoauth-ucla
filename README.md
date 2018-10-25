@@ -1,5 +1,5 @@
 # AutoAuth for UCLA
-Speed up UCLA Single Sign-On. © 2018 Kevin Hsieh. All Rights Reserved. 
+Speed up UCLA Single Sign-On.
 
 - This is a WebExtension designed for Firefox and Chrome. To install, please go
   to Firefox Add-ons or the Chrome Web Store.
@@ -15,3 +15,5 @@ Speed up UCLA Single Sign-On. © 2018 Kevin Hsieh. All Rights Reserved.
 - Firefox only: AutoAuth also automatically signs in with your UCLA Logon ID
   and UCLA Logon Password if your browser is set to fill them in automatically.
 - Uses graphic(s) from [Material Design](https://material.io/icons/).
+
+Copyright © 2018 Kevin Hsieh. All Rights Reserved. 
