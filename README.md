@@ -1,6 +1,8 @@
 # AutoAuth for UCLA
 Speed up UCLA Single Sign-On.
 
+**Update (May 2022): UCLA MFA no longer sends 10 SMS passcodes at a time, so this extension doesn't work anymore. I'd recommend using a security key to speed up MFA instead.**
+
 This is a WebExtension designed for Firefox and Chrome. To install, please go
 to Firefox Add-ons or the Chrome Web Store.
 
